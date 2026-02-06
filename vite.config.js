@@ -1,21 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import { fileURLToPath } from 'url'; // Для преобразования URL в путь
-import { dirname } from 'path'; // Для получения имени директории
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-// 1. Получаем путь к текущему файлу (аналог __filename в ESM)
 const __filename = fileURLToPath(import.meta.url);
 
-// 2. Получаем имя директории (аналог __dirname в ESM)
 const __dirname = dirname(__filename);
 
 
 export default defineConfig({
+  base: "/portfolio-order/",
   
   resolve: {
     alias: {
-      // Теперь '@' корректно указывает на папку src, используя __dirname
       '@': path.resolve(__dirname, './src'), 
     },
   },
@@ -29,5 +27,6 @@ export default defineConfig({
       }
     }
   },
+  
   plugins: [react()], 
 });
