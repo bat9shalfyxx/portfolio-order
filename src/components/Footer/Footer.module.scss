@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: $spacing-md;
+    padding: $padding-header-footer;
+    padding-block: $spacing-xl;
+
+    color: $color-gray-light;
+    background-color: $color-bg-footer-header;
+    border-top: solid $spacing-micro $color-gray-light;
+    
+    span {
+        color: $color-black;
+        font-weight: bold;
+    }
+}

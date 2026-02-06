@@ -1,0 +1,18 @@
+@import url(./reset.scss);
+
+* {
+    &:hover, &:active {
+        transition: all 0.2s ease-in;
+    }
+}
+
+body {
+    font-size: $size-base !important;
+    background-color: #ffeede;
+}
+
+.container {
+    max-width: 1920px;
+    background-color: #fff;
+    margin: 0 auto;
+}
