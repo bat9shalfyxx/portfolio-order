@@ -9,9 +9,7 @@ const MyNavLink = ({ to, title }) => {
                 isActive ? `${styles.navlink} ${styles.active}` : styles.navlink
             } 
         >
-            <span className={
-                styles.title
-            }>
+            <span className={styles.title}>
                 {title}
             </span>
         </NavLink>

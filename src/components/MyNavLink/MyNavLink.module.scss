@@ -1,0 +1,32 @@
+$color-text: #333;
+.navlink {
+    font-size: $font-size-base !important;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px;
+    cursor: pointer;
+    
+    color: $color-text;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.title {
+    display: block;
+}
+
+.navlink:hover .title {
+    color: $color-orange-primary;
+    text-shadow: 0 1px 3px rgba(0, 123, 255, 0.3);
+}
+
+.active {
+    color: $color-orange-primary;
+    border-bottom: 2px solid $color-orange-primary;
+    box-shadow: none;
+    transform: none;
+}
+
+.active:hover .title {
+    color: darken($color-orange-primary, 15%);
+}

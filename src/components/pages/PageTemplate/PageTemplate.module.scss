@@ -1,6 +1,7 @@
 .pageTemplate {
-    display: flex;
-    padding: $padding-page;
-    padding-left: 20vw;
+    @include flex-center;
+    width: 100%;
+    padding: $spacing-3xl;
     min-height: $viewport-height-full;
+    background-color: $color-background-base;
 }

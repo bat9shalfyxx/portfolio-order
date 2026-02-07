@@ -1,0 +1,53 @@
+
+.about {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    p {
+        margin-block: 1rem 1.5rem;
+    }
+    
+    h1 {
+        margin-top: 10px;
+    }
+
+    &_content {
+        text-align: justify;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.header_line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    height: fit-content;
+}
+
+.img_holder {
+    width: 25vw;
+    max-width: 400px;
+    margin-right: $spacing-xl;
+}
+
+.info {
+    width: 40vw;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_img {
+    border-radius: 1rem;
+    box-shadow: $shadow-box-base;
+}
+
+.more_info_block {
+    display: flex;
+    flex-direction: column;
+    max-width: 60vw;
+}

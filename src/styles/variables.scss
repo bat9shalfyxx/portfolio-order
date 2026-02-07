@@ -5,13 +5,12 @@ $color-gray: #545454;
 $color-gray-light: #a0a0a0;
 $color-orange-primary: #DB6D25;
 $color-orange-light: #fbe7d4;
-$color-bg-footer-header: #F4F0ED;
 
 $color-text-primary: #1D2A36 !default;
 $color-text-secondary: #ACAEB1 !default;
 
-$color-background-odd: #FBFAF8 !default;
-$color-background-even: #F4F0ED !default;
+$color-background-base: #f9f7f5 !default;
+$color-bg-footer-header: #f9efe6;
 
 $color-link-hover: #bdbdbd !default;
 $color-link-active: $color-orange-primary;
@@ -49,17 +48,17 @@ $font-size-5xl: 3rem !default;      // 48px
 
 // padding
 $padding-page: $spacing-xl $spacing-2xl;
-$padding-header-footer: $spacing-lg $spacing-4xl*2;
+$padding-header-footer: $spacing-lg 10vw;
 
 // border
 $border-base: $spacing-xs solid $color-gray;
 
 // shadows
+$shadow-box-base: 3px 3px 3px $color-gray-light;
 $shadow-link-hover: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
 
 // mixins
 @mixin flex-center {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
