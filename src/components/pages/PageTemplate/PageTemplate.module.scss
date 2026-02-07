@@ -1,7 +1,7 @@
 .pageTemplate {
     @include flex-center;
     width: 100%;
-    padding: $spacing-3xl;
+    padding: clamp(0.4rem, 4vw, 3rem);
     min-height: $viewport-height-full;
     background-color: $color-background-base;
 }

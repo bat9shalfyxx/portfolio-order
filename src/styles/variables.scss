@@ -1,20 +1,30 @@
 // colors
-$color-black: #000 !default; 
-$color-white: #fff !default; 
-$color-gray: #545454;
-$color-gray-light: #a0a0a0;
-$color-orange-primary: #DB6D25;
-$color-orange-light: #fbe7d4;
+$color-primary: #c2b3a6;
+$color-primary-light: rgba(74, 111, 165, 0.1);
+$color-secondary: #6B4E71;
+$color-secondary-light: rgba(107, 78, 113, 0.1);
+$color-accent: #cf7d7d;
+$color-background-light: #F8F9FA;
 
-$color-text-primary: #1D2A36 !default;
-$color-text-secondary: #ACAEB1 !default;
+$color-black: #0a0a0a !default;
+$color-white: #fefefe !default;
+$color-gray: #5a6268 !default;
+$color-gray-light: #b0b7bf !default;
 
-$color-background-base: #f9f7f5 !default;
-$color-bg-footer-header: #f9efe6;
+// Акцентные цвета - оранжевая палитра
+$color-orange-primary: #e59268;
 
-$color-link-hover: #bdbdbd !default;
-$color-link-active: $color-orange-primary;
-$color-link-active-hover: $color-orange-light;
+// Текстовая палитра
+$color-text-primary: #1c2b3a !default;
+$color-text-secondary: #8e9aaf !default;
+
+// Фоны
+$color-background-base: #faf8f5 !default;
+$color-bg-footer-header: #f5efe9 !default;
+
+// Ссылки
+$color-link-hover: #95a5a6 !default;
+$color-link-active: #d0995e;
 
 // sizes
 $size-base: 16px !default;
@@ -52,8 +62,16 @@ $padding-header-footer: $spacing-lg 10vw;
 
 // border
 $border-base: $spacing-xs solid $color-gray;
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 20px;
+$border-radius-xl: 24px;
 
 // shadows
+$shadow-box-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+$shadow-box-base: 0 6px 25px rgba(0, 0, 0, 0.1);
+$shadow-box-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+$shadow-box-elevated: 0 20px 40px rgba(0, 0, 0, 0.1);
 $shadow-box-base: 3px 3px 3px $color-gray-light;
 $shadow-link-hover: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
 

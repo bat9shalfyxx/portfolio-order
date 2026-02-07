@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.about}>
-                <MyNavLink to="/" title="Случайный Пользователь"/>
+                <MyNavLink to="/" title="Анастасия Рагулина"/>
             </div>
 
             <div className={styles.main}>
