@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router"
 import PageTemplate from "../PageTemplate/PageTemplate";
 import MyButton from "../../MyButton/MyButton";
 import styles from "./About.module.scss";
@@ -15,13 +15,6 @@ const About = () => {
     "Повышение квалификации: регулярное участие в курсах и семинарах от ведущих специалистов.",
     "Достижения: призер соревнований по ноузворку, подготовка собак к ОКД и обидиенс."
   ];
-
-//   const stats = [
-//     { number: "3+", label: "года опыта" },
-//     { number: "100+", label: "довольных клиентов" },
-//     { number: "2", label: "собственных собаки" },
-//     { number: "10+", label: "пройденных курсов" }
-//   ];
 
   return (
     <PageTemplate>
@@ -53,17 +46,6 @@ const About = () => {
           </div>
           
         </div>
-
-        {/* <div className={styles.statsSection}>
-          <div className={styles.statsContainer}>
-            {stats.map((stat, index) => (
-              <div key={index} className={styles.statItem}>
-                <div className={styles.statNumber}>{stat.number}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div> */}
 
         <div className={styles.contentSection}>
           <div className={styles.mainContent}>
@@ -121,7 +103,7 @@ const About = () => {
               <h3 className={styles.sidebarTitle}>Мои собаки</h3>
               <div className={styles.dogsInfo}>
                 <div className={styles.dogCard}>
-                  <img src={dog1} className={styles.dogAvatar} alt="Каспер" />
+                  <img src={dog2} className={styles.dogAvatar} alt="Каспер" />
                   <div className={styles.dogDetails}>
                     <h4>Каспер</h4>
                     <p className={styles.dogBreed}>Японский шпиц</p>
@@ -129,7 +111,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className={styles.dogCard}>
-                  <img src={dog2} className={styles.dogAvatar} alt="Тейна" />
+                  <img src={dog1} className={styles.dogAvatar} alt="Тейна" />
                   <div className={styles.dogDetails}>
                     <h4>Тейна</h4>
                     <p className={styles.dogBreed}>Бордер колли</p>
