@@ -1,4 +1,5 @@
 import PageTemplate from '../PageTemplate/PageTemplate';
+import MyNavLink from "../../MyNavLink/MyNavLink"
 import styles from './Prices.module.scss';
 import { CheckCircle, Clock, Dog, PhoneCall, Mail } from 'lucide-react';
 
@@ -115,9 +116,11 @@ const Prices = () => {
                     
                     <p className={styles.serviceDescription}>{service.description}</p>
                     
-                    <button className={styles.bookButton}>
-                      Записаться
-                    </button>
+                    <MyNavLink to="/request" className={styles.bookButton}>
+                        <button className={styles.bookButton}>
+                          Записаться
+                        </button>
+                      </MyNavLink>
                   </div>
                 ))}
               </div>
@@ -165,9 +168,11 @@ const Prices = () => {
                     
                     <p className={styles.serviceDescription}>{service.description}</p>
                     
-                    <button className={styles.bookButton}>
-                      Записаться
-                    </button>
+                      <MyNavLink to="/request" className={styles.bookButton}>
+                        <button className={styles.bookButton}>
+                          Записаться
+                        </button>
+                      </MyNavLink>
                   </div>
                 ))}
               </div>
