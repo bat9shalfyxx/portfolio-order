@@ -138,7 +138,7 @@
   }
 }
 
-.imageDecoration {
+.imageDecoration, .imageDecorationSec {
   position: absolute;
   top: -20px;
   right: -20px;
@@ -147,7 +147,7 @@
   background: linear-gradient(45deg, $color-primary, $color-accent);
   border-radius: 24px;
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0.11;
 }
 
 // Stats Section
@@ -382,12 +382,6 @@
     }
     @media (max-width: 488px) {
       max-width: 85%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .imageDecoration {
-      display: none;
     }
   }
 }
@@ -629,5 +623,15 @@
   
   .subtitle {
     max-width: 80vw;
+  }
+}
+
+
+@media (max-width: 488px) {
+  .imageDecorationSec {
+    top: -7px !important;
+    right: -7px !important;
+    width: 95%;
+    height: 95%;
   }
 }

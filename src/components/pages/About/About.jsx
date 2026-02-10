@@ -95,7 +95,7 @@ const About = () => {
               <div className={styles.teamImageHolder}>
                 <div className={styles.imageWrapper}>
                   <img className={styles.teamImage} src={team} alt="Команда призеров" loading="lazy"/>
-                  <div className={styles.imageDecoration}></div>
+                  <div className={`${styles.imageDecorationSec}`}></div>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ const About = () => {
 
             <div className={styles.contactPrompt}>
               <p>Есть вопросы по дрессировке?</p>
-              <a href="https://t.me/@An_yah" target="blank" className={styles.contactLink}>
+              <a href="https://t.me/An_yah" target="blank" className={styles.contactLink}>
                 <MyButton className={styles.contactButton} title="Написать мне" />
               </a>
             </div>

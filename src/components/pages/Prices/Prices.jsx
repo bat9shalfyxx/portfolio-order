@@ -258,11 +258,11 @@ const Prices = () => {
               <p className={styles.contactText}>
                 Подберём оптимальный формат занятий именно для вашей собаки
               </p>
-              <button className={styles.contactButton}>
-                <a href="https://t.me/@An_yah" target="blank">
-                  Написать в Telegram
+                <a href="https://t.me/An_yah" target="blank" className={styles.tgLink}>
+                  <button className={styles.contactButton}>
+                      Написать в Telegram
+                  </button>
                 </a>
-              </button>
               <div className={styles.contactInfo}>
                 <p><PhoneCall size={15}/> +7 (922) 817-80-00</p>
               </div>
