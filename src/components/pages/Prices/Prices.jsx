@@ -63,9 +63,6 @@ const Prices = () => {
         <div className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.title}>Стоимость занятий</h1>
-            <p className={styles.subtitle}>
-              Профессиональные услуги кинолога с индивидуальным подходом к каждой собаке
-            </p>
           </div>
         </div>
 
