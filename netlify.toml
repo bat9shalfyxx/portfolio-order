@@ -1,8 +1,0 @@
-[build]
-  command = ""
-  publish = "."
-
-[[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
-  status = 200
