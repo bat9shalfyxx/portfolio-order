@@ -1,0 +1,13 @@
+[build]
+  command = ""
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/portfolio-order/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/portfolio-order/index.html"
+  status = 200  
