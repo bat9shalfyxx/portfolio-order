@@ -1,14 +1,14 @@
 import PageTemplate from '../PageTemplate/PageTemplate';
 import MyNavLink from "../../MyNavLink/MyNavLink"
 import styles from './Prices.module.scss';
-import { CheckCircle, Clock, Dog, PhoneCall, Mail } from 'lucide-react';
+import { CheckCircle, Clock, Dog, PhoneCall } from 'lucide-react';
 
 const Prices = () => {
   const individualServices = [
     {
       title: '60 минут одна собака',
       price: '2500₽',
-      description: 'Индивидуальная работа с кинологом',
+      description: 'Занятие с одной собакой',
       icon: <Dog size={24} />,
     },
     {
@@ -26,7 +26,7 @@ const Prices = () => {
     {
       title: 'Абонемент на 4 занятия по 30 минут',
       price: '6400₽',
-      description: 'Экономия 400₽',
+      description: 'Выгодно!',
       icon: <CheckCircle size={24} />,
       saving: '400₽',
       popular: true,
@@ -37,13 +37,13 @@ const Prices = () => {
     {
       title: 'Разовое занятие в группе 60 минут',
       price: '1500₽',
-      description: 'Работа с группой собак',
+      description: 'Занятие в группе до 4 собак',
       icon: <Dog size={24} />,
     },
     {
       title: 'Абонемент на 5 занятий',
       price: '5000₽',
-      description: 'Экономия 2500₽',
+      description: 'Занятие в группе до 4 собак',
       icon: <CheckCircle size={24} />,
       saving: '2500₽',
       popular: true,
@@ -51,13 +51,12 @@ const Prices = () => {
   ];
 
   const rules = [
-    'Собаки должны быть социально адаптированы и не агрессивны к другим собакам',
-    'Обязательна предварительная запись на групповые занятия',
-    'Присутствие хозяина обязательно на всем протяжении занятия',
-    'Наличие базовых команд (сидеть, лежать, ко мне) приветствуется',
-    'Вакцинация и обработка от паразитов обязательны',
-    'Первое занятие - ознакомительное, для оценки уровня подготовки собаки',
-    'Перенос занятия возможен за 24 часа до начала',
+    'Собаки должны быть социально адаптированы и не агрессивны к другим собакам.',
+    'Разовое  занятие в группе возможно при наличии мест.',
+    'В рамках абонемента возможен один бесплатный пропуск.',
+    'В случаe, если на абонемент приходятся 2 пропуска, то возможна отработка пропущенного занятия в другой группе (при наличии мест).',
+    'Собака должна быть привита и обработана от паразитов согласно графику.',
+    'Первое занятие - ознакомительное, для оценки уровня подготовки собаки.',
   ];
 
   return (
@@ -80,9 +79,9 @@ const Prices = () => {
                   <Dog className={styles.sectionIcon} size={28} />
                   Индивидуальные занятия
                 </h2>
-                <p className={styles.sectionDescription}>
+                {/* <p className={styles.sectionDescription}>
                   Персональный подход к вашей собаке с разработкой индивидуальной программы тренировок
-                </p>
+                </p> */}
               </div>
 
               <div className={styles.servicesGrid}>
@@ -130,11 +129,11 @@ const Prices = () => {
               <div className={styles.sectionHeader}>
                 <h2 className={styles.sectionTitle}>
                   <Dog className={styles.sectionIcon} size={28} />
-                  Групповые занятия
+                  Групповые занятия (Nosework)
                 </h2>
-                <p className={styles.sectionDescription}>
+                {/* <p className={styles.sectionDescription}>
                   Обучение в группе для социализации и отработки команд в условиях реальной среды
-                </p>
+                </p> */}
               </div>
 
               <div className={styles.servicesGrid}>
@@ -180,10 +179,21 @@ const Prices = () => {
 
             <div className={styles.rulesCard}>
               <div className={styles.rulesHeader}>
-                <h2 className={styles.rulesTitle}>Правила посещения групповых занятий</h2>
-                <p className={styles.rulesSubtitle}>
-                  Для обеспечения безопасности и эффективности тренировок
-                </p>
+                <h2 className={styles.rulesTitle}>Где проходят занятия:</h2>
+                <div className={styles.where}>
+                  <div className={styles.whereEl}>
+                    <h4>Занятия проходят в уютном зале «DogLoft» по адресу: ул.Лиственная 18 корпус 1.</h4>
+                  </div>
+                  <div className={styles.whereEl}>
+                    <h4>При необходимости занятия могут проходить на улице.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.rulesCard}>
+              <div className={styles.rulesHeader}>
+                <h2 className={styles.rulesTitle}>Правила посещения групповых занятий (Nosework)</h2>
               </div>
               
               <div className={styles.rulesList}>
@@ -254,11 +264,12 @@ const Prices = () => {
                 Подберём оптимальный формат занятий именно для вашей собаки
               </p>
               <button className={styles.contactButton}>
-                Написать в Telegram
+                <a href="https://t.me/@An_yah" target="blank">
+                  Написать в Telegram
+                </a>
               </button>
               <div className={styles.contactInfo}>
-                <p><PhoneCall size={15}/> +7 (999) 123-45-67</p>
-                <p><Mail size={15} /> dogtrainer@example.com</p>
+                <p><PhoneCall size={15}/> +7 (922) 817-80-00</p>
               </div>
             </div>
           </div>

@@ -8,9 +8,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    // font-family: 'Lucida Console', Monaco, monospace;
-    // font-family: Consolas, 'Andale Mono', 'Lucida Console', monospace;
     font-size: $size-base !important;
     background-color: #ffeede;
 }
@@ -19,6 +16,10 @@ body {
     max-width: 1920px;
     background-color: #fff;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+        width: 100vw;
+    }
 }
 
 h1 {
@@ -43,5 +44,5 @@ h3 {
 p {
     color: $color-gray;
     font-size: clamp(0.875rem, 1vw, 1rem); // 14px - 16px
-    line-height: 1.4; // Увеличил line-height для читаемости
+    line-height: 1.4;
 }

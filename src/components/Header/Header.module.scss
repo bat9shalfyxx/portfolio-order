@@ -3,16 +3,21 @@
     padding: $padding-header-footer;
     justify-content: space-between;
     align-items: center;
-    gap: 5vw;
+    gap: 3vw;
     
     background-color: $color-bg-footer-header;
     border-bottom: solid $spacing-micro $color-gray-light;
+    
+    @media (max-width: 420px) {
+        padding: 1rem 0.7rem;
+    }
 }
 .about {
+    display: flex;
     font-size: $font-size-2xl;
 }
 
 .main {
     display: flex;
-    gap: clamp(1rem, 3vw, 2.5rem);
+    gap: clamp(0.5rem, 3vw, 2.5rem);
 }

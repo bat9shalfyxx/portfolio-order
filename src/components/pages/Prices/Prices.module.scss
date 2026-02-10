@@ -43,6 +43,37 @@
   background-clip: text;
 }
 
+.where {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.6rem;
+  &El {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    border-radius: $spacing-lg;
+    background-color: rgba($color-gray-light, 0.2);
+    
+    h4 {
+      line-height: 2;
+      position: relative;
+      font-weight: bold;
+      padding-left: 1.5rem;
+      color: $color-secondary;
+      font-size: clamp(0.7rem, 2.1vw, 1rem);
+      
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: $color-secondary;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
 .subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: $color-text-secondary;
@@ -401,7 +432,6 @@
 .contactButton {
   width: 100%;
   background: white;
-  color: $color-orange-primary;
   border: none;
   padding: 1rem;
   border-radius: 12px;
@@ -409,7 +439,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 1.5rem;
-
+  
+  a {
+    color: $color-secondary;
+  }
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -449,26 +482,50 @@
 
 @media (max-width: 480px) {
   .serviceCard {
-    padding: 1rem;
+    padding: 0.6rem;
   }
 
   .serviceHeader {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
-
+  
   .iconWrapper {
     margin: 0 auto;
   }
-
+  
   .rulesList .ruleItem {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
-
+    gap: 0.3rem;
+    
     .ruleIcon {
       margin: 0 auto;
     }
+  }
+}
+
+@media (max-width: 420px) {
+  .sectionCard, .rulesCard, .contactCard {
+    padding: 1rem 0.3rem;
+  }
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+  .bookButton {
+    padding-inline: 4rem;
+  }
+  .serviceCard {
+    padding: 0.3rem;
+  }
+  .contactButton {
+    padding: 0.5rem;
+  }
+  .prices {
+    padding: 1rem 0.4rem;
+  }
+  .priceSection {
+    padding: 0.5rem;
   }
 }

@@ -230,7 +230,7 @@ const Request = () => {
                         </div>
 
                         <div className={styles.inputGroup}>
-                            <label htmlFor="telegram" className={styles.label}>Telegram</label>
+                            <label htmlFor="telegram" className={styles.label}>Telegram (при наличии)</label>
                             <input
                                 id="telegram"
                                 name="telegram"

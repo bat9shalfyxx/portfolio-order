@@ -2,9 +2,13 @@
     @include flex-center;
     text-align: center;
     flex-direction: column;
-    padding: $spacing-xl 0;
+    padding: 6rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding-block: 3rem;
+    }
 }
 
 .header {
@@ -209,5 +213,22 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    input, select, button {
+        width: 70vw !important;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    input, select, button {
+        width: 90vw !important;
     }
 }

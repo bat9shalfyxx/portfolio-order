@@ -5,15 +5,17 @@ import styles from "./About.module.scss";
 import img from "../../../img/person.png";
 import dog1 from "../../../img/dog1.png";
 import dog2 from "../../../img/dog2.png";
+import team from "../../../img/team.jpg";
 
 const About = () => {
   const qualifications = [
     "Специализация: НоузВорк - начальный, средний и профи уровень, Бытовое послушание.",
     "Образование: СПбГАУ, бакалавр, специальность «Биология/кинология» (диплом с отличием).",
     "Тема ВКР: «Методика подготовки собак к соревнованиям по спортивной дисциплине NoseWork».",
-    "Опыт работы: с 2021 года - инструктор по бытовому послушанию, НоузВорк, наставник в «CleverDog Академии».",
+    "С 2021 года - инструктор по бытовому послушанию, НоузВорк, наставник в «CleverDog Академии».",
     "Повышение квалификации: регулярное участие в курсах и семинарах от ведущих специалистов.",
-    "Достижения: призер соревнований по ноузворку, подготовка собак к ОКД и обидиенс."
+    "Достижения: призер соревнований по ноузворку, оконченное образование 2019 - 2023г.",
+    "Неоднократный призер и победитель соревнований по Nosework."
   ];
 
   return (
@@ -37,10 +39,7 @@ const About = () => {
             
             <div className={styles.ctaButtons}>
               <NavLink to="/request" className={styles.primaryLink}>
-                <MyButton className={styles.primaryButton} title="Стать нашим клиентом" />
-              </NavLink>
-              <NavLink to="/contact" className={styles.secondaryLink}>
-                <MyButton className={styles.secondaryButton} title="Задать вопрос" variant="outline" />
+                <MyButton className={styles.primaryButton} title="Записаться на занятия" />
               </NavLink>
             </div>
           </div>
@@ -52,9 +51,7 @@ const About = () => {
             <div className={styles.aboutCard}>
               <h2 className={styles.sectionTitle}>Обо мне</h2>
               <p className={styles.description}>
-                Я специализируюсь на индивидуальном подходе к каждому клиенту и собаке, 
-                используя современные методы дрессировки с акцентом на положительное подкрепление. 
-                Мой опыт позволяет работать с собаками всех возрастов и пород — от щенков до взрослых собак.
+                Я инструктор - кинолог с 2021 года. Работаю с собаками всех возрастов и пород от щенков до взрослых собак. Специализируюсь на проведении занятий , по дисциплине Nosework и бытовом послушании. Рекомендованный инструктор Nosework от Российской ассоциации Ноузворк.
               </p>
               <p className={styles.description}>
                 Моя миссия — создавать гармоничные отношения между хозяином и собакой через понимание, 
@@ -90,9 +87,26 @@ const About = () => {
                   <div className={styles.courseCard}>Dog-тренер (Антонина Зимарева)</div>
                   <div className={styles.courseCard}>Школа инструкторов Nosework 1-3 сессии</div>
                   <div className={styles.courseCard}>Курсы "Помойка" и "Трюки" (Антонина Зимарева)</div>
-                  <div className={styles.courseCard}>Мир вашей собаки (Ульяна Мальцева)</div>
+                  <div className={styles.courseCard}>Создадим мир, в котором живет ваша собака (Ульяна мельцева)</div>
                   <div className={styles.courseCard}>Инструктор-кинолог (CleverDog)</div>
+                  <div className={styles.courseCard}>Семинар «Высший класс» (От Анастасии Бахчеван)</div>
                   <div className={styles.courseCard}>Семинар по ОСО (Анастасия Бахчеван)</div>
+                  <div className={styles.courseCard}>Первая сессия школы для инструкторов и владельцев (Школа безконфликтной дрессировки)</div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div className={styles.teamHolder}>
+              <div className={styles.teamInfo}>
+                <h3>Мои ученики - неоднократные призеры и победители соревнований NoseWork. </h3>
+                <p>За 2025 год была выстроена сплоченная команда учеников которая регулярно становится призерами и победителями соревнований по дисциплине NoseWork в разных классах сложности.</p>
+              </div>
+              
+              <div className={styles.teamImageHolder}>
+                <div className={styles.imageWrapper}>
+                  <img className={styles.teamImage} src={team} alt="Команда призеров" loading="lazy"/>
+                  <div className={styles.imageDecoration}></div>
                 </div>
               </div>
             </div>
@@ -115,7 +129,7 @@ const About = () => {
                   <div className={styles.dogDetails}>
                     <h4>Тейна</h4>
                     <p className={styles.dogBreed}>Бордер колли</p>
-                    <p className={styles.dogActivity}>Ноузворк 0 класс, подготовка к обидиенс-1</p>
+                    <p className={styles.dogActivity}>Ноузворк 1, обидиенс-1</p>
                   </div>
                 </div>
               </div>
@@ -125,6 +139,7 @@ const About = () => {
               <h3 className={styles.sidebarTitle}>Специализация</h3>
               <div className={styles.skillsList}>
                 <div className={styles.skillItem}>НоузВорк</div>
+                <div className={styles.skillItem}>Трюковая дрессировка</div>
                 <div className={styles.skillItem}>Бытовое послушание</div>
                 <div className={styles.skillItem}>Коррекция поведения</div>
                 <div className={styles.skillItem}>Подготовка к соревнованиям</div>
@@ -134,9 +149,9 @@ const About = () => {
 
             <div className={styles.contactPrompt}>
               <p>Есть вопросы по дрессировке?</p>
-              <NavLink to="/contact" className={styles.contactLink}>
+              <a href="https://t.me/@An_yah" target="blank" className={styles.contactLink}>
                 <MyButton className={styles.contactButton} title="Написать мне" />
-              </NavLink>
+              </a>
             </div>
           </div>
         </div>

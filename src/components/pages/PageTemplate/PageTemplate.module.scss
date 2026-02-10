@@ -1,7 +1,11 @@
 .pageTemplate {
     @include flex-center;
     width: 100%;
-    padding: clamp(0.4rem, 4vw, 3rem);
-    min-height: $viewport-height-full;
+    // padding: clamp(0.4rem, 4vw, 3rem);
+    min-height: 100vh;
+
     background-color: $color-background-base;
+    @media (max-width: 480px) {
+        width: 100vw !important;
+    }
 }

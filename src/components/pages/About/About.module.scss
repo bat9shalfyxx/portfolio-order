@@ -110,9 +110,9 @@
   }
 }
 
-.heroImage {
+.heroImage, .teamImageHolder {
   flex: 1;
-  min-width: 300px;
+  min-width: 200px;
   position: relative;
   z-index: 2;
 }
@@ -124,7 +124,7 @@
   margin: 0 auto;
 }
 
-.mainImg {
+.mainImg, .teamImage {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -221,7 +221,8 @@
 // Cards
 .aboutCard,
 .qualificationsCard,
-.sidebarCard {
+.sidebarCard,
+.teamHolder {
   background: white;
   border-radius: 20px;
   padding: 2rem;
@@ -333,6 +334,56 @@
     background: $color-primary;
     color: white;
     transform: scale(1.05);
+  }
+}
+
+.team {
+  &Holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 2rem;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 2.5rem;
+    }
+    @media (max-width: 560px) {
+      margin-top: 1rem;
+      padding: 1rem 0.5rem;
+    }
+  }
+  
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 2vw, 2rem);
+    max-width: 7%;
+    max-width: 50%;
+    
+    h3 {
+      font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    }
+    
+    p {
+      font-size: clamp(0.8rem, 1.7vw, 1.1rem);
+      text-align: justify;
+    }
+    
+    @media (max-width: 1200px) {
+      max-width: 70%;  
+    }
+    @media (max-width: 768px) {
+      margin-left: 1.5rem;
+      max-width: 70%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .imageDecoration {
+      display: none;
+    }
   }
 }
 
@@ -483,6 +534,10 @@
     padding: 1.5rem;
     gap: 2rem;
   }
+
+  .primaryButton {
+    padding: 0.5rem 1rem;
+  }
   
   .title {
     font-size: 2rem;
@@ -502,7 +557,8 @@
   
   .aboutCard,
   .qualificationsCard,
-  .sidebarCard {
+  .sidebarCard,
+  .teamHolder {
     padding: 1.5rem;
   }
   
@@ -525,16 +581,29 @@
   .statsContainer {
     grid-template-columns: 1fr;
   }
+  .ctaButtons {
+    max-width: 80vw;
+  }
+  
+  .primaryButton {
+    padding: 0.3rem 0.5rem;
+  }
   
   .heroSection {
-    text-align: center;
+    align-items: start;
+    padding: 0rem;
   }
   
   .badge {
+    font-size: 0.8rem;
     margin: 0 auto 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
   }
   
   .subtitle {
-    text-align: center;
+    max-width: 80vw;
   }
 }

@@ -9,8 +9,8 @@ const Header = () => {
             </div>
 
             <div className={styles.main}>
-                <MyNavLink to="/prices" title="УСЛУГИ"/>
-                <MyNavLink to="/request" title="ЗАКАЗАТЬ"/>
+                <MyNavLink to="/prices" title="СТОИМОСТЬ ЗАНЯТИЙ  "/>
+                <MyNavLink to="/request" title="ЗАПИСЬ"/>
             </div>
         </header>
     )
