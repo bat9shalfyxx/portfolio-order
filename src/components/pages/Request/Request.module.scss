@@ -2,26 +2,212 @@
     @include flex-center;
     text-align: center;
     flex-direction: column;
+    padding: $spacing-xl 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: $spacing-xl;
+    max-width: 800px;
+}
+
+.subtitle {
+    font-size: $font-size-sm;
+    color: $color-orange-primary;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-sm;
+}
+
+.title {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    color: $color-black;
+    margin-bottom: $spacing-md;
+    
+    @media (max-width: 768px) {
+        font-size: $font-size-xl;
+    }
+}
+
+.description {
+    font-size: $font-size-base;
+    color: $color-gray;
+    line-height: 1.6;
+    
+    @media (max-width: 768px) {
+        font-size: $font-size-sm;
+    }
 }
 
 .form {
-    display: flex;  
+    width: 100%;
+    max-width: 900px;
+    margin-top: $spacing-lg;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg $spacing-xl;
+    margin-bottom: $spacing-xl;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+    }
+}
+
+.inputGroup {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
-    gap: 0.25rem;
+    text-align: left;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $color-black;
+    margin-bottom: $spacing-xs;
+    
+    svg {
+        color: $color-orange-primary;
+    }
 }
 
 .input {
-    display: flex;
-    font-size: $font-size-xs;
-    flex-direction: column;
-    padding: $spacing-md;  
-    
+    width: 100%;
+    padding: $spacing-md;
+    font-size: $font-size-base;
     border-radius: $border-radius-md;
     border: 2px solid $color-orange-light;
+    background: white;
+    transition: all 0.3s ease;
     
-    &_inline {
-        flex-direction: row;
+    &:focus {
+        outline: none;
+        border-color: $color-orange-primary;
+        box-shadow: 0 0 0 3px rgba($color-orange-primary, 0.1);
+    }
+    
+    &:hover {
+        border-color: rgba($color-orange-primary, 0.5);
+    }
+    
+    &::placeholder {
+        color: $color-gray-light;
+        font-size: $font-size-sm;
+    }
+    
+    @media (max-width: 768px) {
+        padding: $spacing-sm;
+        font-size: $font-size-sm;
+    }
+}
+
+.select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f97316' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $spacing-md center;
+    background-size: 16px;
+    cursor: pointer;
+    padding-right: $spacing-xl;
+    
+    &:invalid {
+        color: $color-gray-light;
+    }
+}
+
+.submitButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    background: linear-gradient(135deg, $color-orange-primary, $color-orange-dark);
+    color: white;
+    border: none;
+    padding: $spacing-lg $spacing-xl;
+    font-size: $font-size-base;
+    font-weight: 600;
+    border-radius: $border-radius-lg;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba($color-orange-primary, 0.2);
+        background: linear-gradient(135deg, $color-orange-dark, $color-orange-primary);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+    
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+    
+    svg {
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover svg {
+        transform: translateX(2px);
+    }
+    
+    @media (max-width: 768px) {
+        max-width: 100%;
+        padding: $spacing-md;
+    }
+}
+
+.successMessage {
+    background: rgba(34, 197, 94, 0.1);
+    border: 2px solid $color-green;
+    color: $color-green-dark;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-lg;
+    animation: slideIn 0.3s ease;
+}
+
+.errorMessage {
+    background: rgba(239, 68, 68, 0.1);
+    border: 2px solid $color-red;
+    color: $color-red-dark;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-lg;
+    animation: slideIn 0.3s ease;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

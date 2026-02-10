@@ -11,9 +11,15 @@ $color-white: #fefefe !default;
 $color-gray: #5a6268 !default;
 $color-gray-light: #b0b7bf !default;
 
+$color-green: #22c55e;        // Основной зеленый (из rgba(34, 197, 94))
+$color-green-dark: #166534;   // Темно-зеленый для текста
+
+$color-red: #ef4444;          // Основной красный (из rgba(239, 68, 68))
+$color-red-dark: #991b1b;     // Темно-красный для текста  
 // Акцентные цвета - оранжевая палитра
-$color-orange-primary: #e59268;
+$color-orange-primary: #e79166;
 $color-orange-light: #db9d7e;
+$color-orange-dark: #b35323;
 
 // Текстовая палитра
 $color-text-primary: #1c2b3a !default;
