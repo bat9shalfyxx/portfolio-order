@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 
 
 export default defineConfig({
-  base: "/portfolio-order/",
+  base: "/",
   
   resolve: {
     alias: {
