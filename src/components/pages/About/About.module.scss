@@ -364,10 +364,12 @@
     
     h3 {
       font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+      font-weight: bold;
     }
     
     p {
-      font-size: clamp(0.8rem, 1.7vw, 1.1rem);
+      font-weight: bold;
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
       text-align: justify;
     }
     
@@ -375,8 +377,11 @@
       max-width: 70%;  
     }
     @media (max-width: 768px) {
-      margin-left: 1.5rem;
+      margin-left: 1rem;
       max-width: 70%;
+    }
+    @media (max-width: 488px) {
+      max-width: 85%;
     }
   }
   
@@ -530,7 +535,14 @@
 
 // Responsive Design
 @media (max-width: 768px) {
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
   .heroSection {
+    flex-direction: column;
     padding: 1.5rem;
     gap: 2rem;
   }
@@ -547,7 +559,7 @@
     flex-direction: column;
     
     button {
-      width: 100%;
+      width: 100% !important;
     }
   }
   
@@ -588,8 +600,6 @@
     max-width: 96%;
     padding: 0.6rem;
   }
-  .courseCard {
-  }
   .about {
     padding-inline: 0.1rem;
   }
@@ -605,7 +615,6 @@
   }
   
   .heroSection {
-    align-items: start;
     padding: 0rem;
   }
   

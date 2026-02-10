@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 
 const Request = () => {
     const [formData, setFormData] = useState({
+        who: "",
         breed: "",
         name: "",
         age: "",
@@ -57,6 +58,7 @@ const Request = () => {
             };
       
             const templateParams = {
+                who: cleanText(formData.who),
                 breed: cleanText(formData.breed),
                 name: cleanText(formData.name),
                 age: cleanText(formData.age),
@@ -80,6 +82,7 @@ const Request = () => {
             setIsSent(true);
     
             setFormData({
+                who: "",
                 breed: "",
                 name: "",
                 age: "",
@@ -130,6 +133,20 @@ const Request = () => {
                 <form className={styles.form} onSubmit={sendEmail}>
                     <div className={styles.formGrid}>
                         <div className={styles.inputGroup}>
+                            <label htmlFor="who" className={styles.label}>Как вас зовут:</label>
+                            <input
+                                id="who"
+                                name="who"
+                                type="text"
+                                className={styles.input}
+                                placeholder="Введите ваше имя"
+                                value={formData.who}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+
+                        <div className={styles.inputGroup}>
                             <label htmlFor="breed" className={styles.label}>Порода собаки *</label>
                             <input
                                 id="breed"
@@ -156,7 +173,7 @@ const Request = () => {
                                 required
                             />
                         </div>
-
+                        
                         <div className={styles.inputGroup}>
                             <label htmlFor="age" className={styles.label}>Возраст собаки *</label>
                             <input

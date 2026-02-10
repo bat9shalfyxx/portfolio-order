@@ -9,12 +9,11 @@ import team from "../../../img/team.jpg";
 
 const About = () => {
   const qualifications = [
-    "Специализация: НоузВорк - начальный, средний и профи уровень, Бытовое послушание.",
     "Образование: СПбГАУ, бакалавр, специальность «Биология/кинология» (диплом с отличием).",
+    "Призер соревнований по ноузворку, образование 2019 - 2023г.",
     "Тема ВКР: «Методика подготовки собак к соревнованиям по спортивной дисциплине NoseWork».",
     "С 2021 года - инструктор по бытовому послушанию, НоузВорк, наставник в «CleverDog Академии».",
     "Повышение квалификации: регулярное участие в курсах и семинарах от ведущих специалистов.",
-    "Достижения: призер соревнований по ноузворку, оконченное образование 2019 - 2023г.",
     "Неоднократный призер и победитель соревнований по Nosework."
   ];
 
@@ -70,26 +69,15 @@ const About = () => {
                 ))}
               </div>
               
-              <div className={styles.experienceDetails}>
-                <h3 className={styles.detailsTitle}>Опыт работы:</h3>
-                <ul className={styles.experienceList}>
-                  <li>С 06.2021 — инструктор по бытовому послушанию</li>
-                  <li>С 08.2021 — передержка домашних животных</li>
-                  <li>С 08.2022 — инструктор НоузВорк</li>
-                  <li>С 02.2023 — наставник в «CleverDog Академии»</li>
-                  <li>С 09.2023 — инструктор в кинологическом лагере «CleverDog»</li>
-                </ul>
-              </div>
-              
               <div className={styles.educationDetails}>
                 <h3 className={styles.detailsTitle}>Образование и курсы:</h3>
                 <div className={styles.coursesGrid}>
                   <div className={styles.courseCard}>Dog-тренер (Антонина Зимарева)</div>
                   <div className={styles.courseCard}>Школа инструкторов Nosework 1-3 сессии</div>
                   <div className={styles.courseCard}>Курсы "Помойка" и "Трюки" (Антонина Зимарева)</div>
-                  <div className={styles.courseCard}>Создадим мир, в котором живет ваша собака (Ульяна мельцева)</div>
+                  <div className={styles.courseCard}>Создадим мир, в котором живет ваша собака (Ульяна Мальцева)</div>
                   <div className={styles.courseCard}>Инструктор-кинолог (CleverDog)</div>
-                  <div className={styles.courseCard}>Семинар «Высший класс» (От Анастасии Бахчеван)</div>
+                  <div className={styles.courseCard}>Семинар «Высший класс» (Анастасия Бахчеван)</div>
                   <div className={styles.courseCard}>Семинар по ОСО (Анастасия Бахчеван)</div>
                   <div className={styles.courseCard}>Первая сессия школы для инструкторов и владельцев (Школа безконфликтной дрессировки)</div>
                 </div>
@@ -100,7 +88,7 @@ const About = () => {
             <div className={styles.teamHolder}>
               <div className={styles.teamInfo}>
                 <h3>Мои ученики - неоднократные призеры и победители соревнований NoseWork. </h3>
-                <p>За 2025 год была выстроена сплоченная команда учеников которая регулярно становится призерами и победителями соревнований по дисциплине NoseWork в разных классах сложности.</p>
+                <p>За 2025 год была выстроена сплоченная команда учеников, которая регулярно становится призерами и победителями соревнований по дисциплине NoseWork в разных классах сложности.</p>
               </div>
               
               <div className={styles.teamImageHolder}>
