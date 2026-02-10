@@ -578,6 +578,21 @@
 }
 
 @media (max-width: 480px) {
+  .contactPrompt {
+    padding: 1.5rem 0.8rem;
+  }
+  .aboutCard,
+  .qualificationsCard,
+  .sidebarCard,
+  .teamHolder {
+    max-width: 96%;
+    padding: 0.6rem;
+  }
+  .courseCard {
+  }
+  .about {
+    padding-inline: 0.1rem;
+  }
   .statsContainer {
     grid-template-columns: 1fr;
   }
