@@ -13,8 +13,7 @@ const Request = () => {
         activity: "",
         schedule: "",
         phone: "",
-        telegram: "",
-        email: ""
+        telegram: ""
     });
 
     const [isLoading, setIsLoading] = useState(false);
@@ -66,7 +65,6 @@ const Request = () => {
                 schedule: cleanText(formData.schedule),
                 phone: cleanText(formData.phone),
                 telegram: cleanText(formData.telegram) || "Не указан",
-                email: cleanText(formData.email),
                 date: new Date().toLocaleString('ru-RU'),
             }
             
@@ -90,7 +88,6 @@ const Request = () => {
                 schedule: "",
                 phone: "",
                 telegram: "",
-                email: ""
             })
     
             setTimeout(() => {
@@ -256,20 +253,6 @@ const Request = () => {
                                 placeholder="@username"
                                 value={formData.telegram}
                                 onChange={handleChange}
-                            />
-                        </div>
-
-                        <div className={styles.inputGroup}>
-                            <label htmlFor="email" className={styles.label}>Email *</label>
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                className={styles.input}
-                                placeholder="example@mail.com"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
                             />
                         </div>
                     </div>
