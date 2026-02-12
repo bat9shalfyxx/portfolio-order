@@ -35,7 +35,7 @@ const Prices = () => {
   const groupServices = [
     {
       title: 'Разовое занятие в группе 60 минут',
-      price: '1500₽',
+      price: '1400₽',
       description: 'Занятие в группе до 4 собак',
       icon: <Dog size={24} />,
     },
