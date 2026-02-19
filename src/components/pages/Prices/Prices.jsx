@@ -44,7 +44,7 @@ const Prices = () => {
       price: '5000₽',
       description: 'Занятие в группе до 4 собак',
       icon: <CheckCircle size={24} />,
-      saving: '2500₽',
+      saving: '2000₽',
       popular: true,
     },
   ];
@@ -153,7 +153,7 @@ const Prices = () => {
                       {service.saving && (
                         <div className={styles.saving}>
                           <span className={styles.originalPrice}>
-                            {service.saving === '2500₽' ? '7500₽' : ''}
+                            {service.saving === '2000₽' ? '7000₽' : ''}
                           </span>
                           Экономия {service.saving}
                         </div>

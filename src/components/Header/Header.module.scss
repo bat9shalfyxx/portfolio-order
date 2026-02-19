@@ -1,16 +1,16 @@
 .header {
-    display: flex;
     padding: $padding-header-footer;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3vw;
-    
     background-color: $color-bg-footer-header;
     border-bottom: solid $spacing-micro $color-gray-light;
     
     @media (max-width: 420px) {
         padding: 1rem 0.7rem;
     }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .about {
     display: flex;

@@ -22,7 +22,7 @@ const About = () => {
         <div className={styles.heroSection}>
           <div className={styles.heroImage}>
             <div className={styles.imageWrapper}>
-              <img src={img} alt="Кинолог с собакой" className={styles.mainImg} />
+              <img src={img} alt="Кинолог с собакой" className={styles.mainImg} loading="lazy"/>
               <div className={styles.imageDecoration}></div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const About = () => {
               <h3 className={styles.sidebarTitle}>Мои собаки</h3>
               <div className={styles.dogsInfo}>
                 <div className={styles.dogCard}>
-                  <img src={dog2} className={styles.dogAvatar} alt="Каспер" />
+                  <img src={dog2} className={styles.dogAvatar} alt="Каспер" loading="lazy" />
                   <div className={styles.dogDetails}>
                     <h4>Каспер</h4>
                     <p className={styles.dogBreed}>Японский шпиц</p>
@@ -114,7 +114,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className={styles.dogCard}>
-                  <img src={dog1} className={styles.dogAvatar} alt="Тейна" />
+                  <img src={dog1} className={styles.dogAvatar} alt="Тейна" loading="lazy" />
                   <div className={styles.dogDetails}>
                     <h4>Тейна</h4>
                     <p className={styles.dogBreed}>Бордер колли</p>
