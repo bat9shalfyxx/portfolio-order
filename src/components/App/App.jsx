@@ -4,11 +4,14 @@ import Footer from '../Footer/Footer';
 import About from "../pages/About/About";
 import Prices from "../pages/Prices/Prices";
 import Request from "../pages/Request/Request";
+import SEO from "../SEO";
 import "../../styles/style.scss";
 
 const App = () => {
   return (
     <HashRouter>
+      <SEO/>
+
       <div className="container">
         <Header/>
         
@@ -24,4 +27,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
