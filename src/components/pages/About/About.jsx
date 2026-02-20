@@ -22,7 +22,7 @@ const About = () => {
         <div className={styles.heroSection}>
           <div className={styles.heroImage}>
             <div className={styles.imageWrapper}>
-              <img src={img} alt="Кинолог с собакой" className={styles.mainImg} loading="lazy"/>
+              <img src={img} alt="Кинолог с собакой" className={styles.mainImg} width="500" height="500" loading="lazy"/>
               <div className={styles.imageDecoration}></div>
             </div>
           </div>

@@ -9,6 +9,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: $size-base !important;
+    font-weight: bold;
     background-color: #ffeede;
 }
 
@@ -43,6 +44,6 @@ h3 {
 
 p {
     color: $color-gray;
-    font-size: clamp(0.875rem, 1vw, 1rem); // 14px - 16px
+    font-size: clamp(0.8rem, 0.9vw, 1rem); // 14px - 16px
     line-height: 1.4;
 }
